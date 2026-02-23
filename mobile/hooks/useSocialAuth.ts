@@ -24,4 +24,6 @@ export const useSocialAuth = () => {
       setIsLoading(false);
     }
   };
+
+  return { isLoading, handleSocialAuth };
 };
