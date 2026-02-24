@@ -106,22 +106,24 @@ const ProfileScreen = () => {
           <View className="mb-4">
             <View className="flex-row items-center mb-1">
               <Text className="text-xl font-bold text-gray-900 mr-1">
-                {currentUser.firstName} {currentUser.lastName}
+                {currentUser?.firstName} {currentUser?.lastName}
               </Text>
               <Feather name="check-circle" size={20} color="#1DA1F2" />
             </View>
-            <Text className="text-gray-500 mb-2">@{currentUser.username}</Text>
-            <Text className="text-gray-900 mb-3">{currentUser.bio}</Text>
+            <Text className="text-gray-500 mb-2">@{currentUser?.username}</Text>
+            <Text className="text-gray-900 mb-3">{currentUser?.bio}</Text>
 
             <View className="flex-row items-center mb-2">
               <Feather name="map-pin" size={16} color="#657786" />
-              <Text className="text-gray-500 ml-2">{currentUser.location}</Text>
+              <Text className="text-gray-500 ml-2">
+                {currentUser?.location}
+              </Text>
             </View>
 
             <View className="flex-row items-center mb-3">
               <Feather name="calendar" size={16} color="#657786" />
               <Text className="text-gray-500 ml-2">
-                Joined {format(new Date(currentUser.createdAt), "MMMM yyyy")}
+                Joined {format(new Date(currentUser?.createdAt), "MMMM yyyy")}
               </Text>
             </View>
 
