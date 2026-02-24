@@ -55,7 +55,7 @@ const ProfileScreen = () => {
       <View className="flex-row items-center justify-between px-4 py-3 border-b border-gray-100">
         <View>
           <Text className="text-xl font-bold text-gray-900">
-            {currentUser.firstName} {currentUser.lastName}
+            {currentUser?.firstName} {currentUser?.lastName}
           </Text>
           <Text className="text-gray-500 text-sm">
             {userPosts.length} Posts
@@ -82,7 +82,7 @@ const ProfileScreen = () => {
         <Image
           source={{
             uri:
-              currentUser.bannerImage ||
+              currentUser?.bannerImage ||
               "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=400&fit=crop",
           }}
           className="w-full h-48"
@@ -92,7 +92,7 @@ const ProfileScreen = () => {
         <View className="px-4 pb-4 border-b border-gray-100">
           <View className="flex-row justify-between items-end -mt-16 mb-4">
             <Image
-              source={{ uri: currentUser.profilePicture }}
+              source={{ uri: currentUser?.profilePicture }}
               className="w-32 h-32 rounded-full border-4 border-white"
             />
             <Pressable
@@ -131,7 +131,7 @@ const ProfileScreen = () => {
               <Pressable className="mr-6">
                 <Text className="text-gray-900">
                   <Text className="font-bold">
-                    {currentUser.following?.length}
+                    {currentUser?.following?.length}
                   </Text>
                   <Text className="text-gray-500"> Following</Text>
                 </Text>
@@ -139,7 +139,7 @@ const ProfileScreen = () => {
               <Pressable>
                 <Text className="text-gray-900">
                   <Text className="font-bold">
-                    {currentUser.followers?.length}
+                    {currentUser?.followers?.length}
                   </Text>
                   <Text className="text-gray-500"> Followers</Text>
                 </Text>
